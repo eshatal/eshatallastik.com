@@ -1,0 +1,247 @@
+/* Genel Sıfırlama Stilleri */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+::-webkit-scrollbar {
+    background: #95a5a6;
+    width: 14px;
+}
+::-webkit-scrollbar-thumb {
+    background: #2c3e50;
+}
+
+/* Body Temel Stilleri */
+.body {
+    flex: 25%;
+}
+
+/* HTML ve Body Boyutlandırma */
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+/* Üst Navigasyon Çubuğu */
+nav {
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #212529;
+    position: relative;
+    height: 45px;
+}
+
+nav ul {
+    display: flex;
+    gap: 50px;
+}
+
+
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav ul li a:hover {color: #ff0000;}
+i:hover {color: gray;}
+
+/* Sosyal Medya İkonları */
+.menu-icon i {
+    color: #fff;
+    font-size: 20px;
+    align-items: center;
+    padding: 5px;
+}
+
+/* İkinci Navigasyon Çubuğu */
+nav1 {
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: gray;
+    position: relative;
+    height: 80px;
+    /*width: 100%;*/
+    
+
+    
+}
+
+/* Logo Stilleri */
+.logo {
+    color: #fff;
+    display: flex;
+    right: 15px;
+}
+
+.isimler {
+    text-align: center;
+    margin-top: 0;
+    position: relative;
+    font-size: 35px;
+    left: 35px;
+    color: white;
+    list-style-type: none;
+    text-decoration: none;
+   
+}
+
+nav1 ul{
+    display: flex;
+    gap: 90px;
+    transform: translate(-20%, -0%);
+    font-size: 20px;
+
+    
+}
+
+nav1 ul li{
+    list-style-type: none;
+    text-decoration: none;
+    color: #fff;
+}
+nav1 ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+nav1 ul li a:hover {
+    color: black;
+}
+
+
+
+.hakımızda-left img{
+width: 420px;
+height: auto;
+transform: translate(50px);
+}
+
+#hakımızda{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 12%;
+}
+
+.hakımızda-right {
+    width: 54%;
+}
+
+.hakımızda-right ul li{
+    display: flex;
+    align-items: center;
+}
+
+.hakımızda-right h4{
+    color: #e74d06;
+    font-size: 37px;
+    margin-bottom: 5px;
+
+}
+
+.hakımızda-right p{
+    color: #444;
+    line-height: 26px;
+    font-size: 15px;
+}
+
+.hakımızda-right .adres{
+    margin: 25px 0;
+}
+
+.hakımızda-right .adres ul li{
+margin-bottom: 5px;
+}
+
+.adres .adress-logo{
+    margin-right: 15px;
+    color: #e74d06;
+}
+
+.adres .seprater{
+    margin: 0 25px;
+}
+
+
+
+
+
+/*.containera {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+*/
+.containera {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+
+   
+  }
+
+  .sectiona {
+    flex: 1;
+    margin: 0 20px;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .sectiona h2 {
+    color: #ff0000;
+    margin-bottom: 20px;
+  }
+
+  .brand-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .brand-list li {
+    margin-bottom: 5px;
+  }
+
+  .social-media {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .social-media a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+
+  .social-media a:hover {
+    color: #ccc;
+  }
+
+  .info {
+    text-align: center;
+    margin-top: 20px;
+  }

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LASTİK PARK</title>
+    <link rel="stylesheet" href="hakımızda.css">
+    <link rel="stylesheet" href="javas.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+::-webkit-scrollbar {
+    background: #95a5a6;
+    width: 14px;
+}
+::-webkit-scrollbar-thumb {
+    background: #2c3e50;
+}
+
+/* Body Temel Stilleri */
+.body {
+    flex: 25%;
+   
+}
+
+/* HTML ve Body Boyutlandırma */
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+        /* Üst Navigasyon Çubuğu */
+nav {
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #212529;
+    position: relative;
+    height: 45px;
+}
+
+nav ul {
+    display: flex;
+    gap: 50px;
+}
+
+
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav ul li a:hover {color: #ff0000;}
+i:hover {color: gray;}
+
+/* Sosyal Medya İkonları */
+.menu-icon i {
+    color: #fff;
+    font-size: 20px;
+    align-items: center;
+    padding: 5px;
+}
+
+/* İkinci Navigasyon Çubuğu */
+nav1 {
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: gray;
+    position: relative;
+    height: 80px;
+    /*width: 100%;*/
+    
+
+    
+}
+
+/* Logo Stilleri */
+.logo {
+    color: #fff;
+    display: flex;
+    right: 15px;
+}
+
+.isimler {
+    text-align: center;
+    margin-top: 0;
+    position: relative;
+    font-size: 35px;
+    left: 35px;
+    color: white;
+    list-style-type: none;
+    text-decoration: none;
+   
+}
+
+nav1 ul{
+    display: flex;
+    gap: 90px;
+    transform: translate(-20%, -0%);
+    font-size: 20px;
+
+    
+}
+
+nav1 ul li{
+    list-style-type: none;
+    text-decoration: none;
+    color: #fff;
+}
+nav1 ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+nav1 ul li a:hover {
+    color: black;
+}
+
+        /* Haber Konteyneri */
+        .haber-container {
+            display: flex;
+            flex-wrap: wrap; /* Fazla haberlerin alt satıra geçmesi */
+            justify-content: center; /* Haberlerin ortalanması */
+            gap: 20px; /* Haberler arası boşluk */
+        }
+
+        /* Haber Kartı Tasarımı */
+        .haber-kart {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: calc(33.333% - 20px); /* Yan yana 3 haber */
+            max-width: 400px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        /* Hover Efekti */
+        .haber-kart:hover {
+            transform: scale(1.05);
+        }
+
+        /* Haber Görseli */
+        .haber-gorsel {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        /* Haber İçeriği */
+        .haber-icerik {
+            padding: 15px;
+        }
+
+        /* Haber Başlığı */
+        .haber-baslik {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Haber Özeti */
+        .haber-ozet {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+
+        /* Responsive Tasarım */
+        @media (max-width: 1024px) {
+            .haber-kart {
+                width: calc(50% - 20px); /* Tablet için 2 sütun */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .haber-kart {
+                width: 100%; /* Mobil için tam genişlik */
+            }
+        }
+
+
+
+        .containera {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+
+   
+  }
+
+  .sectiona {
+    flex: 1;
+    margin: 0 20px;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .sectiona h2 {
+    color: #ff0000;
+    margin-bottom: 20px;
+  }
+
+  .brand-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .brand-list li {
+    margin-bottom: 5px;
+  }
+
+  .social-media {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .social-media a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+
+  .social-media a:hover {
+    color: #ccc;
+  }
+
+  .info {
+    text-align: center;
+    margin-top: 20px;
+  }
+    </style>
+</head>
+<body>
+
+
+    <nav>
+        <ul>
+            <li><a href="kampanya.html">Kampanya</a></li>
+            <li><a href="haberler.html">Haberler</a></li>
+            <li><a href="lastikrehberi.html">Lastik rehberi</a></li>
+        </ul>
+        <div class="menu-icon">
+           <a href="https://www.instagram.com/eshat_al_/"  target="_blank"> <i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <!--<i class="fa-solid fa-magnifying-glass"></i>-->
+        </div>
+    </nav>
+
+    <!-- Logo ve Ana Menü -->
+    <nav1>
+        <a class="isimler" href="menü1.html">BARIŞ AL</a>
+        </div>
+        <ul>
+            <li><a href="hakımızda.html">HAKKIMIZDA</a></li>
+            <li><a href="markalar.html">MARKALAR</a></li>
+            <li><a href="iletişim.html">İLETİŞİM</a></li>
+            <li><a href="index.html">PAZAR YERİMİZ</a>
+        </ul>
+    </nav1>
+
+
+
+
+    <!-- Haber Konteyneri -->
+    <div class="haber-container">
+        <!-- Haber 1 -->
+        <div class="haber-kart">
+            <img src="9y506-075204-UMv.jpg" alt="Haber 1 Görseli" class="haber-gorsel">
+            <div class="haber-icerik">
+                <h2 class="haber-baslik">Teknoloji Haberleri</h2>
+                <p class="haber-ozet">Yapay zeka alanındaki son gelişmeler ve geleceğe etkileri...</p>
+                
+            </div>
+        </div>
+
+        <!-- Haber 2 -->
+        <div class="haber-kart">
+            <img src="9y506-075204-UMv.jpg" alt="Haber 2 Görseli" class="haber-gorsel">
+            <div class="haber-icerik">
+                <h2 class="haber-baslik">Bilim ve Araştırma</h2>
+                <p class="haber-ozet">Uzay araştırmalarında yeni keşifler ve bilimsel çalışmalar...</p>
+                
+            </div>
+        </div>
+
+        <!-- Haber 3 -->
+        <div class="haber-kart">
+            <img src="9y506-075204-UMv.jpg" alt="Haber 3 Görseli" class="haber-gorsel">
+            <div class="haber-icerik">
+                <h2 class="haber-baslik">Çevre ve Sürdürülebilirlik</h2>
+                <p class="haber-ozet">İklim değişikliği ile mücadelede yeni stratejiler...</p>
+                
+            </div>
+        </div>
+
+        <!-- Haber 4 -->
+        <div class="haber-kart">
+            <img src="9y506-075204-UMv.jpg" alt="Haber 4 Görseli" class="haber-gorsel">
+            <div class="haber-icerik">
+                <h2 class="haber-baslik">Sağlık Haberleri</h2>
+                <p class="haber-ozet">Tıp dünyasından son gelişmeler ve tedavi yöntemleri...</p>
+                
+            </div>
+        </div>
+
+        <!-- Haber 5 -->
+        <div class="haber-kart">
+            <img src="9y506-075204-UMv.jpg" alt="Haber 5 Görseli" class="haber-gorsel">
+            <div class="haber-icerik">
+                <h2 class="haber-baslik">Eğitim ve Teknoloji</h2>
+                <p class="haber-ozet">Dijital eğitim platformları ve yenilikçi öğrenme yöntemleri...</p>
+               
+            </div>
+        </div>
+
+        <!-- Haber 6 -->
+        <div class="haber-kart">
+            <img src="9y506-075204-UMv.jpg" alt="Haber 6 Görseli" class="haber-gorsel">
+            <div class="haber-icerik">
+                <h2 class="haber-baslik">Ekonomi ve Girişimcilik</h2>
+                <p class="haber-ozet">Startup'lar ve girişimcilik ekosistemindeki son gelişmeler...</p>
+               
+            </div>
+        </div>
+    </div>
+
+    <div class="containera">
+        <div class="sectiona">
+          <h2>MARKALAR</h2>
+          <ul class="brand-list">
+            <li>Goodyear</li>
+            <li>Michelin</li>
+            <li>Pirelli</li>
+            <li>Continental</li>
+            <li>Hankook</li>
+            <li>Marshal</li>
+            <li>Tatko</li>
+            <li>Bkt</li>
+            <li>Vitour</li>
+            <li>Riken</li>
+            <li>Lassa</li>
+            <li>Waterfall</li>
+            <li>Bridgestone</li>
+            <li>Yokohama</li>
+            <li>BFGoodrich</li>
+            <li>Kumho</li>
+            <li>Cooper</li>
+            <li>Minerva</li>
+            <li>Unique</li>
+          </ul>
+        </div>
+        <div class="sectiona">
+          <h2>SOSYAL MEDYA</h2>
+          <p>HESAPLARIMIZ</p>
+          <div class="social-media">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/eshat_al_/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+          <div class="info">
+            <p>Site Kullanım Koşulları</p>
+            <p>Kişisel Verilerin Korunması ve Gizlilik</p>
+          </div>
+        </div>
+      </div>
+
+
+
+
+</body>
+</html>
